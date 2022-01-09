@@ -1,0 +1,20 @@
+
+<app-loader [classSpinner]="'normal'" *ngIf="loading; else gallery"></app-loader>
+
+<ng-template #gallery>
+    <div class="gallery" *ngIf="(photos && photos.length > 0); else notContent" >
+        <div  *ngFor="let photo of photos" class="image-container" (click)="seePhoto(photo.id!)" >
+            <img [src]="photo.image">
+            
+        </div>
+    
+    </div>
+
+</ng-template>
+<ng-template #notContent>
+    <div class="not-content">
+        <h1>Añade tus fotos!</h1>
+    </div>
+</ng-template>
+
+<app-floating-action-button></app-floating-action-button>

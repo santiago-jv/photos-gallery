@@ -1,0 +1,30 @@
+.gallery{
+    columns: 5;
+    column-gap: 0;
+    margin-top: 4rem;
+}
+.image-container{
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+.image-container:hover{
+    opacity: .94;
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+.not-content{
+    margin-top: 8rem;
+}
+h1{
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-align: center;
+}
+@media screen and (max-width:768px) {
+    .gallery{
+        columns: 3;
+    }
+}

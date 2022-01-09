@@ -1,0 +1,18 @@
+<app-loader [classSpinner]="'normal'" *ngIf="!photo; else seePhoto" ></app-loader>
+
+<ng-template #seePhoto>
+    <app-sidebar [photo] = "photo"></app-sidebar>
+        
+        
+   
+    <div *ngIf="photo">
+        <header>
+            <i (click)="openSidebar()" class="fas fa-info-circle"></i>
+            <i (click)="deletePhoto()" class="fas fa-trash-alt"></i>
+        </header>
+        <main >
+            <img [src]="photo.image" alt="">
+    
+        </main>
+    </div>
+</ng-template>

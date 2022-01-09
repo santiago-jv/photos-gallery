@@ -1,0 +1,10 @@
+<div id="sidebar" class="container" #sidebar>
+    <header>
+        <h1 class="title">Image Information</h1>
+        <i (click)="closeSidebar()" class="fas fa-times"></i>
+    </header>
+    <section class="information">
+        <span>Image ID: <strong>{{photo.id }}</strong></span>
+        <span>Created at: <strong>{{photo.createdAt | date }}</strong></span>
+    </section>
+</div>

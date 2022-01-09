@@ -1,0 +1,9 @@
+<section class="container">
+    <h1>Save a image here </h1>
+    <img [src]="photo" *ngIf="photo">
+    <form [formGroup]="photoForm" (ngSubmit)="savePhoto()">
+        <input #photoElement  (change)="onChange($event)" type="file" accept=".jpg , .png , .jpeg">
+        <button type="button" (click)="openWindow(photoElement)">Select image</button>
+        <button [disabled]="!photoForm.valid || loading" type="submit"><app-loader [classSpinner]="'spinner-button'" *ngIf="loading"></app-loader>Confirm image</button>
+    </form>
+</section>
